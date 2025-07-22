@@ -18,7 +18,7 @@ const BranchesSection: React.FC = () => {
     <Box className="branchBox" alignItems="center" mb={5} pt={5} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <Grid container justifyContent="center" alignItems="center" spacing={4} sx={{ maxWidth: 900, margin: '0 auto' }}>
         <Grid item xs={12} md={3} textAlign="center">
-          <Image src="/assets/homepage/ylanes.svg" alt="YlaneLogo" width={120} height={40} />
+          <Image src="/assets/homepage/ylanes.svg" alt="TrangDev Logo" width={120} height={40} />
         </Grid>
         <Grid item xs={12} md={9}>
           <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 6 }}>

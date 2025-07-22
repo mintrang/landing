@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
         <Toolbar disableGutters sx={{ minHeight: 64, px: { xs: 0, md: 1 } }}>
           {/* Logo */}
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
-            <Image src="/assets/homepage/ylanes.svg" alt="Logo" width={120} height={40} />
+            <Image src="/assets/homepage/png_chip_bg.png" alt="TrangDev" width={120} height={40}/>
           </Box>
           {/* Menu desktop */}
           {!isSmall && (

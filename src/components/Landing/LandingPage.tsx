@@ -28,7 +28,7 @@ const LandingPage: React.FC = () => {
     <>
       <Header onOpenLogin={() => setOpenLogin(true)} />
 
-      <Box id="home" sx={{ scrollMarginTop: '80px' }}>
+      <Box id="home" sx={{ scrollMarginTop: '70px' }}>
         <HeroSection />
       </Box>
 
