@@ -18,11 +18,15 @@ import DynamicSlideSection from "./DynamicSlideSection";
 import Header from "./Header";
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import LoginModal from './LoginModal';
+import { useState } from 'react';
 
 const LandingPage: React.FC = () => {
+  const [openLogin, setOpenLogin] = useState(false);
+
   return (
     <>
-      <Header />
+      <Header onOpenLogin={() => setOpenLogin(true)} />
 
       <Box id="home" sx={{ scrollMarginTop: '80px' }}>
         <HeroSection />
@@ -76,6 +80,7 @@ const LandingPage: React.FC = () => {
       >
         <KeyboardArrowUpIcon fontSize="large" />
       </Fab>
+      <LoginModal open={openLogin} onClose={() => setOpenLogin(false)} />
     </>
   );
 };

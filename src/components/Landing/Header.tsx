@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from "react";
 import {
   AppBar,
@@ -23,11 +22,14 @@ const menuItems = [
   { label: "Topics", target: "topics" },
 ];
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onOpenLogin: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isSmall = useMediaQuery("(max-width:900px)");
 
-  // Scroll mượt đến section
   const handleMenuClick = (target: string) => {
     setDrawerOpen(false);
     const el = document.getElementById(target);
@@ -37,9 +39,21 @@ const Header: React.FC = () => {
   };
 
   return (
-    <AppBar position="sticky" color="default" elevation={0} sx={{ boxShadow: "0px 0px 18px 5px rgb(0 0 0 / 5%)" }}>
-      <Container>
-        <Toolbar disableGutters sx={{ minHeight: 64 }}>
+    <AppBar
+      position="fixed"
+      color="default"
+      elevation={0}
+      sx={{
+        boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.08)',
+        px: { xs: 0, md: 2 },
+        py: 0.5,
+        background: 'white',
+        zIndex: 1201,
+        borderBottom: 'none',
+      }}
+    >
+      <Container maxWidth="lg" sx={{ px: { xs: 1, md: 2 } }}>
+        <Toolbar disableGutters sx={{ minHeight: 64, px: { xs: 0, md: 1 } }}>
           {/* Logo */}
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
             <Image src="/assets/homepage/ylanes.svg" alt="Logo" width={120} height={40} />
@@ -52,7 +66,7 @@ const Header: React.FC = () => {
                   key={item.label}
                   onClick={() => handleMenuClick(item.target)}
                   sx={{
-                    color: "#27272A",
+                    color: "#222",
                     fontWeight: 500,
                     fontSize: 16,
                     position: "relative",
@@ -92,7 +106,23 @@ const Header: React.FC = () => {
                   {item.label}
                 </Button>
               ))}
-              <Button variant="contained" color="primary" sx={{ borderRadius: 10, ml: 2, background: '#FFCB00', color: '#010039', fontWeight: 700, '&:hover': { background: '#FFD700' } }}>
+              <Button
+                variant="contained"
+                color="primary"
+                sx={{
+                  borderRadius: 10,
+                  ml: 2,
+                  background: '#FFCB00',
+                  color: '#010039',
+                  fontWeight: 700,
+                  boxShadow: '0 2px 8px 0 rgba(255,203,0,0.15)',
+                  '&:hover': { background: '#FFD700' },
+                  px: 3,
+                  py: 1.2,
+                  fontSize: 16,
+                }}
+                onClick={onOpenLogin}
+              >
                 Get Started
               </Button>
             </Box>
@@ -100,24 +130,40 @@ const Header: React.FC = () => {
           {/* Menu mobile */}
           {isSmall && (
             <IconButton edge="end" color="inherit" onClick={() => setDrawerOpen(true)}>
-              <MenuIcon />
+              <MenuIcon fontSize="large" />
             </IconButton>
           )}
         </Toolbar>
       </Container>
       {/* Drawer cho mobile */}
       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <Box sx={{ width: 250, p: 2 }}>
+        <Box sx={{ width: 260, p: 2 }}>
           <List>
             {menuItems.map((item) => (
               <ListItem component="li" key={item.label} onClick={() => handleMenuClick(item.target)}>
-                <Typography variant="body1" sx={{ color: "#27272A", textDecoration: "none", width: "100%" }}>
+                <Typography variant="body1" sx={{ color: "#222", textDecoration: "none", width: "100%" }}>
                   {item.label}
                 </Typography>
               </ListItem>
             ))}
             <ListItem>
-              <Button variant="contained" color="primary" fullWidth sx={{ borderRadius: 10 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{
+                  borderRadius: 10,
+                  background: '#FFCB00',
+                  color: '#010039',
+                  fontWeight: 700,
+                  boxShadow: '0 2px 8px 0 rgba(255,203,0,0.15)',
+                  '&:hover': { background: '#FFD700' },
+                  px: 3,
+                  py: 1.2,
+                  fontSize: 16,
+                }}
+                onClick={onOpenLogin}
+              >
                 Get Started
               </Button>
             </ListItem>

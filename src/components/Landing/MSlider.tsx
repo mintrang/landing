@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useState, useCallback } from "react";
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
@@ -51,14 +50,6 @@ const MSlider: React.FC<MSliderProps> = ({ isSmall = false, isIpad = false }) =>
       onMouseLeave={handleMouseLeave}
       sx={{ position: "relative", width: cellW * 3 + 6, height: cellH * 2 + 6, display: "grid", gridTemplateColumns: `repeat(3, ${cellW}px)`, gridTemplateRows: `repeat(2, ${cellH}px)`, gap: 3, alignItems: "center", justifyContent: "center" }}
     >
-      {/* Avatar động */}
-      <Box style={{ position: "absolute", left: isIpad ? "18%" : 10, top: "20%", zIndex: 2 }} className="animationOpancity">
-        <Image src="/assets/homepage/avatar_2.svg" alt="Avatar2" width={40} height={40} />
-      </Box>
-      <Box style={{ position: "absolute", bottom: "30%", right: isIpad ? "10%" : 0, zIndex: 2 }} className="animationOpancity">
-        <Image src="/assets/homepage/avatar_3.svg" alt="Avatar3" width={40} height={40} />
-      </Box>
-      {/* Grid ảnh động */}
       {currentItems.map((item, idx) => (
         <motion.div
           key={item.id}
