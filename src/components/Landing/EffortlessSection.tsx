@@ -9,7 +9,7 @@ const EffortlessSection: React.FC = () => {
   const isInView = useInView(ref, { once: false, margin: "-100px" });
 
   return (
-    <Box sx={{ bgcolor: "#010039", py: 8 }}>
+    <Box>
       <Grid container alignItems="center" justifyContent="center" spacing={4}>
         <Grid item xs={12} md={4}>
           <Box ref={ref} sx={{ position: "relative", width: 256, height: 516, mx: "auto" }}>

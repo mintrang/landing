@@ -21,6 +21,14 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import LoginModal from './LoginModal';
 import { useState } from 'react';
 
+const sectionFullWidth = {
+  position: 'relative',
+  left: '50%',
+  width: '100vw',
+  marginLeft: '-50vw',
+  marginRight: '-50vw',
+};
+
 const LandingPage: React.FC = () => {
   const [openLogin, setOpenLogin] = useState(false);
 
@@ -28,35 +36,37 @@ const LandingPage: React.FC = () => {
     <>
       <Header onOpenLogin={() => setOpenLogin(true)} />
 
-      <Box id="home" sx={{ scrollMarginTop: '70px' }}>
+      {/* Hero Section */}
+      <Box id="home" sx={{ scrollMarginTop: '70px', ...sectionFullWidth, bgcolor: 'white' }}>
         <HeroSection />
       </Box>
 
-      <BranchesSection />
-
       {/* Banner Section */}
-      <Box sx={{ backgroundColor: '#010039', color: 'white', textAlign: 'center', py: 6 }}>
-        <Typography variant="h3" fontWeight={700}>
+      <Box sx={{ backgroundColor: '#010039', ...sectionFullWidth, py: 6 }}>
+        <Typography variant="h3" fontWeight={700} sx={{ color: 'white', textAlign: 'center' }}>
           <span style={{ color: '#FFCB00' }}>Thousands</span> of people have joined.<br />
           Don't miss your chance; you don't want to miss out.
         </Typography>
       </Box>
 
-      <Box id="howitworks" sx={{ scrollMarginTop: '80px' }}>
+      {/* How it works Section */}
+      <Box id="howitworks" sx={{ scrollMarginTop: '80px', bgcolor: 'white' }}>
         <HowItWorksSection />
       </Box>
 
-      {/* Features, Testimonials, Footer sẽ tách thành component nhỏ sau */}
-      <Box id="effortless" sx={{ scrollMarginTop: '80px' }}>
+      {/* Effortless Section */}
+      <Box id="effortless" sx={{ scrollMarginTop: '80px', ...sectionFullWidth, bgcolor: '#010039', py: 8 }}>
         <EffortlessSection />
       </Box>
-      <Box id="topics" sx={{ scrollMarginTop: '80px' }}>
+
+      {/* Topics Section */}
+      <Box id="topics" sx={{ scrollMarginTop: '80px', ...sectionFullWidth, bgcolor: 'white' }}>
         <DynamicSlideSection />
       </Box>
 
       {/* Footer */}
-      <Box sx={{ bgcolor: '#010039', color: 'white', py: 6, textAlign: 'center' }}>
-        <Typography variant="body2">© 2023 YLanes. All rights reserved</Typography>
+      <Box sx={{ bgcolor: '#010039', ...sectionFullWidth, color: 'white', py: 6, textAlign: 'center' }}>
+        <Typography variant="body2">© 2023 TrangDev. All rights reserved</Typography>
       </Box>
       {/* Nút cuộn lên đầu */}
       <Fab

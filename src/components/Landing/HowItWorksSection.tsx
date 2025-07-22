@@ -24,24 +24,77 @@ const steps = [
 
 const HowItWorksSection: React.FC = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
 
   return (
-    <Box component="section" sx={{ py: 8, bgcolor: 'white' }}>
-      <Typography variant="h3" fontWeight={700} textAlign="center" gutterBottom sx={{ color: '#222' }}>
+    <Box component="section" sx={{ py: 5, bgcolor: 'white', px: { xs: 1, md: 4 } }}>
+      <Typography
+        variant="h3"
+        fontWeight={700}
+        textAlign="center"
+        gutterBottom
+        sx={{ color: '#222' }}
+      >
         How does it work?
       </Typography>
-      <Grid container spacing={4} justifyContent="center" alignItems="center" ref={ref}>
+
+      <Grid
+        container
+        spacing={4}
+        justifyContent="center"
+        alignItems="stretch"
+        ref={ref}
+      >
         {steps.map((step, idx) => (
-          <Grid item xs={12} md={4} textAlign="center" key={step.title}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={4}
+            key={step.title}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                textAlign: 'center',
+                padding: 16,
+              }}
             >
-              <Image src={step.img} alt="icon" width={180} height={180} style={{ marginBottom: 16 }} />
-              <Typography variant="h5" fontWeight={500} sx={{ color: '#222' }}>{step.title}</Typography>
-              <Typography sx={{ color: '#555' }}>{step.desc}</Typography>
+              <Image
+                src={step.img}
+                alt="icon"
+                width={120}
+                height={120}
+                style={{ marginBottom: 16 }}
+              />
+              <Typography
+                variant="h5"
+                fontWeight={500}
+                sx={{ color: '#222', mt: 2 }}
+              >
+                {step.title}
+              </Typography>
+              <Typography
+                sx={{
+                  color: '#555',
+                  mt: 1,
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                  maxWidth: 300,
+                }}
+              >
+                {step.desc}
+              </Typography>
             </motion.div>
           </Grid>
         ))}
@@ -50,4 +103,4 @@ const HowItWorksSection: React.FC = () => {
   );
 };
 
-export default HowItWorksSection; 
+export default HowItWorksSection;

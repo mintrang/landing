@@ -56,7 +56,9 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
         <Toolbar disableGutters sx={{ minHeight: 64, px: { xs: 0, md: 1 } }}>
           {/* Logo */}
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
-            <Image src="/assets/homepage/png_chip_bg.png" alt="TrangDev" width={120} height={40}/>
+            <Typography variant="h6" fontWeight={700} sx={{ color: '#222', letterSpacing: 1 }}>
+              TrangDev
+            </Typography>
           </Box>
           {/* Menu desktop */}
           {!isSmall && (
