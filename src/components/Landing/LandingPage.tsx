@@ -1,19 +1,12 @@
 'use client';
 
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Image from "next/image";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import "./HomePage.css";
 import EffortlessSection from "./EffortlessSection";
 import HowItWorksSection from "./HowItWorksSection";
 import HeroSection from "./HeroSection";
-import BranchesSection from "./BranchesSection";
 import DynamicSlideSection from "./DynamicSlideSection";
 import Header from "./Header";
 import Fab from '@mui/material/Fab';
@@ -45,7 +38,7 @@ const LandingPage: React.FC = () => {
       <Box sx={{ backgroundColor: '#010039', ...sectionFullWidth, py: 6 }}>
         <Typography variant="h3" fontWeight={700} sx={{ color: 'white', textAlign: 'center' }}>
           <span style={{ color: '#FFCB00' }}>Thousands</span> of people have joined.<br />
-          Don't miss your chance; you don't want to miss out.
+          Don&apos;t miss your chance; you don&apos;t want to miss out.
         </Typography>
       </Box>
 

@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { Box, Grid } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
@@ -17,7 +18,7 @@ const BranchesSection: React.FC = () => {
   return (
     <Box className="branchBox" alignItems="center" mb={5} pt={5} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <Grid container justifyContent="center" alignItems="center" spacing={4} sx={{ maxWidth: 900, margin: '0 auto' }}>
-        <Grid item xs={12} md={3} textAlign="center">
+        <Grid item xs={12} md={3} sx={{ textAlign: 'center' }}>
           <Image src="/assets/homepage/ylanes.svg" alt="TrangDev Logo" width={120} height={40} />
         </Grid>
         <Grid item xs={12} md={9}>

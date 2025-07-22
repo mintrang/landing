@@ -7,7 +7,7 @@ const DynamicSlideSection: React.FC = () => {
   return (
     <Box sx={{ py: 8, bgcolor: 'white', px: { xs: 1, sm: 2, md: 0 }, overflowX: { xs: 'auto', sm: 'auto', md: 'unset' } }}>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
-        <Grid item xs={12} md={7}>
+        <Grid component="div" item xs={12} md={7}>
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -38,8 +38,10 @@ const DynamicSlideSection: React.FC = () => {
             </Button>
           </motion.div>
         </Grid>
-        <Grid item xs={12} md={5} display="flex" justifyContent="center" alignItems="center" sx={{ px: { xs: 2, md: 0 } }}>
-          <MSlider />
+        <Grid  item xs={12} md={5} display="flex" justifyContent="center" alignItems="center" sx={{ px: { xs: 2, md: 0 } }}>
+         
+            <MSlider />
+          
         </Grid>
       </Grid>
     </Box>

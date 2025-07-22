@@ -13,7 +13,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Image from "next/image";
 
 const menuItems = [
   { label: "Home", target: "home" },

@@ -21,10 +21,9 @@ function shuffle<T>(arr: T[]): T[] {
 
 interface MSliderProps {
   isSmall?: boolean;
-  isIpad?: boolean;
 }
 
-const MSlider: React.FC<MSliderProps> = ({ isSmall = false, isIpad = false }) => {
+const MSlider: React.FC<MSliderProps> = ({ isSmall = false }) => {
   const [currentItems, setCurrentItems] = useState(data);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -50,7 +49,7 @@ const MSlider: React.FC<MSliderProps> = ({ isSmall = false, isIpad = false }) =>
       onMouseLeave={handleMouseLeave}
       sx={{ position: "relative", width: cellW * 3 + 6, height: cellH * 2 + 6, display: "grid", gridTemplateColumns: `repeat(3, ${cellW}px)`, gridTemplateRows: `repeat(2, ${cellH}px)`, gap: 3, alignItems: "center", justifyContent: "center" }}
     >
-      {currentItems.map((item, idx) => (
+      {currentItems.map((item) => (
         <motion.div
           key={item.id}
           layout
