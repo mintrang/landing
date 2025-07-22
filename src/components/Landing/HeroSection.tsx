@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
     <Box component="section" sx={{ py: 8, bgcolor: 'white', mt: { xs: 4, md: 6 } }}>
       <Grid container spacing={4} alignItems="center" justifyContent="center" direction={{ xs: 'column-reverse', md: 'row' }}>
         {/* Text Content */}
-        <Grid item xs={12} md={6} display="flex" flexDirection="column" justifyContent="center">
+        <Grid size={{ xs: 12, md: 6 }} display="flex" flexDirection="column" justifyContent="center" alignItems={'center'}>
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </Grid>
         {/* Slide Content */}
-        <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
+        <Grid size={{ xs: 12, md: 6 }} display="flex" justifyContent="center" alignItems="center">
           <HeroSlider />
         </Grid>
       </Grid>

@@ -16,10 +16,9 @@ import { useState } from 'react';
 
 const sectionFullWidth = {
   position: 'relative',
-  left: '50%',
   width: '100vw',
-  marginLeft: '-50vw',
-  marginRight: '-50vw',
+  paddingLeft: '10%',
+  paddingRight: '10%',
 };
 
 const LandingPage: React.FC = () => {

@@ -11,7 +11,7 @@ const EffortlessSection: React.FC = () => {
   return (
     <Box>
       <Grid container alignItems="center" justifyContent="center" spacing={4}>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box ref={ref} sx={{ position: "relative", width: 256, height: 516, mx: "auto" }}>
             {/* Ảnh chính luôn cố định */}
             <Image src="/assets/homepage/chat_list.png" alt="Phone" width={256} height={516} style={{ borderRadius: 20, position: "relative", zIndex: 1, objectFit: "contain" }} />
@@ -44,7 +44,7 @@ const EffortlessSection: React.FC = () => {
             </motion.div>
           </Box>
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <Box pl={{ md: 5 }} color="white" sx={{ textAlign: { xs: 'center', md: 'left' }, px: { xs: 2, md: 0 } }}>
             <Typography variant="h3" fontWeight={700} gutterBottom sx={{ fontSize: { xs: 28, sm: 36, md: 44 } }}>
               Effortless Filtering for Global Connections
