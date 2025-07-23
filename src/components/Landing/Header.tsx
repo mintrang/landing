@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
           {/* Logo */}
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
             <Typography variant="h6" fontWeight={700} sx={{ color: '#222', letterSpacing: 1 }}>
-              TrangDev
+              Landing Page
             </Typography>
           </Box>
           {/* Menu desktop */}

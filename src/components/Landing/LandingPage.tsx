@@ -58,7 +58,7 @@ const LandingPage: React.FC = () => {
 
       {/* Footer */}
       <Box sx={{ bgcolor: '#010039', ...sectionFullWidth, color: 'white', py: 6, textAlign: 'center' }}>
-        <Typography variant="body2">© 2023 TrangDev. All rights reserved</Typography>
+        <Typography variant="body2">© 2025 MinTrang. All rights reserved</Typography>
       </Box>
       {/* Nút cuộn lên đầu */}
       <Fab
