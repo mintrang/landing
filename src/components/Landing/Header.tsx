@@ -13,6 +13,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import Image from 'next/image';
 
 const menuItems = [
   { label: "Home", target: "home" },
@@ -55,6 +56,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
         <Toolbar disableGutters sx={{ minHeight: 64, px: { xs: 0, md: 1 } }}>
           {/* Logo */}
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+            <Image src="/assets/homepage/png_chip_bg.png" alt="Logo" width={36} height={36} style={{ marginRight: 8 }} />
             <Typography variant="h6" fontWeight={700} sx={{ color: '#222', letterSpacing: 1 }}>
               Landing Page
             </Typography>

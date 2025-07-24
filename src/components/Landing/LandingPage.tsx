@@ -53,12 +53,12 @@ const LandingPage: React.FC = () => {
 
       {/* Topics Section */}
       <Box id="topics" sx={{ scrollMarginTop: '80px', ...sectionFullWidth, bgcolor: 'white' }}>
-        <DynamicSlideSection />
+        <DynamicSlideSection onOpenLogin={() => setOpenLogin(true)} />
       </Box>
 
       {/* Footer */}
       <Box sx={{ bgcolor: '#010039', ...sectionFullWidth, color: 'white', py: 6, textAlign: 'center' }}>
-        <Typography variant="body2">© 2025 MinTrang. All rights reserved</Typography>
+        <Typography variant="body2">© 2025 mintrang8899@gmail.com. All rights reserved</Typography>
       </Box>
       {/* Nút cuộn lên đầu */}
       <Fab

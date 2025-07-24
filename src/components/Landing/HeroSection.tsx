@@ -17,18 +17,10 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 1 }}
           >
             <Typography
-              variant="h1"
-              fontWeight={700}
-              gutterBottom
-              sx={{ color: '#222', fontSize: { xs: 28, sm: 36, md: 52 }, textAlign: { xs: 'center', md: 'left' } }}
-            >
-              Landing Page Demo
-            </Typography>
-            <Typography
               variant="h2"
               fontWeight={700}
               gutterBottom
-              sx={{ color: '#222', fontSize: { xs: 32, sm: 40, md: 56 }, textAlign: { xs: 'center', md: 'left' } }}
+              sx={{ color: '#222', fontSize: { xs: 32, sm: 40, md: 56 }, textAlign: { xs: 'center', md: 'left' }, whiteSpace: 'nowrap'  }}
             >
               Worlds <span style={{ color: '#FFCB00' }}>#1 Platform</span>
             </Typography>
@@ -36,7 +28,7 @@ const HeroSection: React.FC = () => {
               variant="h2"
               fontWeight={700}
               gutterBottom
-              sx={{ color: '#222', fontSize: { xs: 32, sm: 40, md: 56 }, textAlign: { xs: 'center', md: 'left' } }}
+              sx={{ color: '#222', fontSize: { xs: 32, sm: 40, md: 56 }, textAlign: { xs: 'center', md: 'left' }, whiteSpace: 'nowrap' }}
             >
               for Connections &
             </Typography>
@@ -56,8 +48,8 @@ const HeroSection: React.FC = () => {
               <Button variant="contained" color="primary" size="large" sx={{ borderRadius: 10 }}>
                 Download Now
               </Button>
-              <Image src="/assets/homepage/GoogleDownload.svg" alt="Google Play" width={32} height={32} />
-              <Image src="/assets/homepage/AppleDownload.svg" alt="App Store" width={32} height={32} />
+              <Image src="/assets/homepage/GoogleDownload.svg" alt="Google Play" width={32} height={32} style={{ cursor: 'pointer' }} />
+              <Image src="/assets/homepage/AppleDownload.svg" alt="App Store" width={32} height={32} style={{ cursor: 'pointer' }} />
             </Box>
           </motion.div>
         </Grid>
