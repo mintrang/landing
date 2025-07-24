@@ -3,7 +3,11 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import MSlider from "./MSlider";
 
-const DynamicSlideSection: React.FC = () => {
+interface DynamicSlideSectionProps {
+  onOpenLogin: () => void;
+}
+
+const DynamicSlideSection: React.FC<DynamicSlideSectionProps> = ({ onOpenLogin }) => {
   return (
     <Box sx={{ py: 8, bgcolor: 'white', px: { xs: 1, sm: 2, md: 0 }, overflowX: { xs: 'auto', sm: 'auto', md: 'unset' } }}>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
@@ -31,8 +35,9 @@ const DynamicSlideSection: React.FC = () => {
                 px: 4,
                 py: 1.5,
                 display: 'block',
-                mx: { xs: 'auto', md: '0' }, // căn giữa trên mobile
+                mx: { xs: 'auto', md: '0' },
               }}
+              onClick={onOpenLogin}
             >
               Take me there
             </Button>

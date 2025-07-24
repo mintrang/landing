@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Landing Page Demo for Interview | Modern UI/UX, MUI, Animation, SEO",
-  description: "A professional Next.js landing page demo for interview and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
+  title: "Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+  description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
   keywords: [
     "Next.js landing page",
     "Next.js interview demo",
@@ -23,11 +24,12 @@ export const metadata: Metadata = {
     "Framer Motion",
     "UI/UX",
     "SEO",
-    "Responsive web design"
+    "Responsive web design",
+    "https://www.linkedin.com/in/trang689/"
   ],
   openGraph: {
-    title: "Next.js Landing Page Demo for Interview | Modern UI/UX, MUI, Animation, SEO",
-    description: "A professional Next.js landing page demo for interview and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
+    title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+    description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
     images: [
       {
         url: "/assets/homepage/ylanes.svg",
@@ -39,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Landing Page Demo for Interview | Modern UI/UX, MUI, Animation, SEO",
-    description: "A professional Next.js landing page demo for interview and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized."
+    title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+    description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized."
   }
 };
 
@@ -53,6 +55,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -17,8 +17,8 @@ import { useState } from 'react';
 const sectionFullWidth = {
   position: 'relative',
   width: '100vw',
-  paddingLeft: '10%',
-  paddingRight: '10%',
+  paddingLeft: { xs: '3%', md: '10%' },
+  paddingRight: { xs: '3%', md: '10%' },
 };
 
 const LandingPage: React.FC = () => {
@@ -60,7 +60,7 @@ const LandingPage: React.FC = () => {
       <Box sx={{ bgcolor: '#010039', ...sectionFullWidth, color: 'white', py: 6, textAlign: 'center' }}>
         <Typography variant="body2">© 2025 mintrang8899@gmail.com. All rights reserved</Typography>
       </Box>
-      {/* Nút cuộn lên đầu */}
+
       <Fab
         color="primary"
         size="medium"
