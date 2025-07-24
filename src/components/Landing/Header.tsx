@@ -18,7 +18,7 @@ import Image from 'next/image';
 const menuItems = [
   { label: "Home", target: "home" },
   { label: "How it works", target: "howitworks" },
-  { label: "Effortless", target: "effortless" },
+  { label: "Smart Filter", target: "effortless" },
   { label: "Topics", target: "topics" },
 ];
 
@@ -140,7 +140,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
       </Container>
       {/* Drawer cho mobile */}
       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <Box sx={{ width: 260, p: 2 }}>
+        <Box sx={{ width: 260, p: 2, mt: 6 }}>
           <List>
             {menuItems.map((item) => (
               <ListItem component="li" key={item.label} onClick={() => handleMenuClick(item.target)}>
