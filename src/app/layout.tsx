@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+  title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
   description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
   keywords: [
     "Next.js landing page",
-    "Next.js interview demo",
+    "Next.js demo",
     "React portfolio",
     "Material-UI",
     "Framer Motion",
@@ -30,9 +30,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
     description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
+    url: "https://www.linkedin.com/in/trang689/",
     images: [
       {
-        url: "/assets/homepage/ylanes.svg",
+        url: "/assets/homepage/slide-1.png",
         width: 1200,
         height: 630,
         alt: "Demo Preview"
@@ -42,7 +43,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
-    description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized."
+    description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
+    images: [
+      {
+        url: "/assets/homepage/slide-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Demo Preview"
+      }
+    ]
   }
 };
 
