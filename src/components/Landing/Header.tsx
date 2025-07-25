@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
             <Image src="/assets/homepage/png_chip_bg.png" alt="Logo" width={36} height={36} style={{ marginRight: 8 }} />
             <Typography variant="h6" fontWeight={700} sx={{ color: '#222', letterSpacing: 1 }}>
-              Landing Page
+              Landing Page Sample
             </Typography>
           </Box>
           {/* Menu desktop */}

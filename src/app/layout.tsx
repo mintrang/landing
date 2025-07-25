@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+  title: "My Landing Page Demo | Nextjs React Modern UI/UX, MUI, Animation, SEO",
   description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
   keywords: [
     "Next.js landing page",
@@ -25,12 +25,10 @@ export const metadata: Metadata = {
     "UI/UX",
     "SEO",
     "Responsive web design",
-    "https://www.linkedin.com/in/trang689/"
   ],
   openGraph: {
-    title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+    title: "My Landing Page Demo | Nextjs React Modern UI/UX, MUI, Animation, SEO",
     description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
-    url: "https://www.linkedin.com/in/trang689/",
     images: [
       {
         url: "/assets/homepage/slide-1.png",
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Landing Page Demo | Modern UI/UX, MUI, Animation, SEO",
+    title: "My Landing Page Demo | Nextjs React Modern UI/UX, MUI, Animation, SEO",
     description: "A professional Next.js landing page demo and portfolio. Built with TypeScript, Material-UI, Framer Motion. Fully responsive, beautiful animation, SEO optimized.",
     images: [
       {
